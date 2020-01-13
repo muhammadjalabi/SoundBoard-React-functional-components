@@ -1,0 +1,222 @@
+@font-face {
+  font-family: "Lakeshore";
+  src: url(./assets/fonts/Lakeshore-Regular.otf);
+}
+
+body {
+  background: url("./assets/images/saltgrains.jpg") no-repeat center center
+    fixed;
+  background-size: cover;
+  height: 100%;
+}
+
+.header__div {
+  display: grid;
+  grid-gap: 5%;
+  border: 2px solid #cdf7e8;
+  padding-bottom: 10px;
+  background: rgba(104, 173, 171, 0.5);
+  border-radius: 10px;
+  margin-top: 10px;
+  margin: auto;
+}
+
+.header__div__title {
+  font-family: Lakeshore, Helvetica, sans-serif;
+  padding-top: 3%;
+  font-size: 3em;
+  color: rgb(128, 0, 92);
+  font-weight: 500;
+  text-align: center;
+  text-shadow: 1px 1px 0 #cdf7e8, -1px -1px 0 #cdf7e8, 1px -1px 0 #cdf7e8,
+    -1px 1px 0 #cdf7e8, 1px 1px 0 #cdf7e8;
+}
+
+.header__div__desc {
+  font-weight: 300;
+  white-space: pre-wrap;
+  color: #cdf7e8;
+  text-shadow: 1px 0 1px #68adab;
+  text-align: center;
+}
+
+.studio__desc {
+  font-weight: 300;
+  white-space: pre-wrap;
+  color: #80005c;
+  text-shadow: 1px 0 1px #68adab;
+  text-align: center;
+}
+.studio__header {
+  font-family: Lakeshore, Helvetica, sans-serif;
+  font-size: 2.5em;
+  color: rgb(128, 0, 92);
+  text-align: center;
+  text-shadow: 2px 3px 0 #cdf7e8, -1px -1px 0 #cdf7e8, 1px -1px 0 #cdf7e8,
+    -1px 1px 0 #cdf7e8, 1px 1px 0 #cdf7e8;
+}
+.studio__audio-playback {
+  outline: none;
+  cursor: pointer;
+}
+
+.main__container {
+  display: grid;
+  margin: 15px 15px 15px 15px;
+}
+.main {
+  padding: 15px 0;
+  margin-top: 30px;
+}
+
+.studio {
+  text-align: center;
+  border-radius: 30px;
+  background-color: rgba(199, 250, 232, 0.3);
+  border: 2px solid #cdf7e8;
+  margin: auto;
+  padding: 2%;
+}
+
+.soundboard {
+  display: grid;
+}
+
+.soundcard {
+  border: 4px solid #cdf7e8;
+  border-radius: 20px;
+  margin: 1rem;
+  font-size: 1rem;
+  padding: 1rem 1rem;
+  transition: all 0.09s;
+  width: auto;
+  text-align: center;
+  color: white;
+  text-shadow: 1px 0 1px black;
+  background-color: rgba(104, 173, 171, 0.6);
+  position: relative;
+}
+.soundcard:hover {
+  box-shadow: 0 2px 8px #68adab;
+  border-color: rgb(128, 0, 92);
+  transition: all 0.3s;
+}
+
+.soundcard__paragraph {
+  font-weight: 600;
+  font-family: "Courier New", Courier, monospace;
+}
+
+.soundcard__holder {
+  cursor: pointer;
+  width: 80%;
+  height: 5em;
+  border: 2px solid rgb(128, 0, 92);
+  padding: 5%;
+  margin: 3%;
+  background-image: linear-gradient(
+    13deg,
+    #cdf7e8 25%,
+    #68adab 25%,
+    #68adab 50%,
+    #cdf7e8 50%,
+    #cdf7e8 75%,
+    #68adab 75%,
+    #68adab 100%
+  );
+  background-size: 62.24px 14.37px;
+  text-align: center;
+  border-radius: 5%;
+}
+.soundcard__holder:hover {
+  width: 84%;
+  border: 2px solid #cdf7e8;
+  transition: all 0.3s;
+  box-shadow: 0 3px 8px rgb(70, 5, 53);
+}
+
+.studio__sound-wave {
+  border-radius: 60%;
+  width: 300px;
+  height: 50px;
+  border: 3px solid rgb(128, 0, 92);
+}
+
+.studio__btn {
+  background-color: #68adab;
+  color: #cdf7e8;
+  border: 2px solid rgb(128, 0, 92);
+  font-family: Lakeshore;
+  padding-bottom: 10px;
+  cursor: pointer;
+  outline: none;
+  font-size: 1.5em;
+  border-radius: 10px;
+  margin: 10px;
+}
+.studio__btn-record {
+  border-color: rgb(210, 48, 48);
+}
+.studio__btn-record:hover {
+  color: rgb(210, 48, 48);
+  transition: all 0.2s;
+  border-color: rgb(128, 0, 92);
+}
+.studio__btn-stop:hover {
+  color: rgb(128, 0, 92);
+  transition: all 0.2s;
+}
+
+.soundcard__holder__btn-paragraph {
+  font-family: Lakeshore, Helvetica, sans-serif;
+  stroke: 2px #cdf7e8;
+  color: #cdf7e8;
+  font-size: 2em;
+  transform: rotate(-7deg);
+  display: inline;
+  text-shadow: 2px 3px 0 rgb(128, 0, 92), -1px -1px 0 rgb(128, 0, 92),
+    1px -1px 0 rgb(128, 0, 92), -1px 1px 0 rgb(128, 0, 92),
+    1px 1px 0 rgb(128, 0, 92);
+}
+
+/* MEDIA QUERIES BELOW */
+
+@media only screen and (max-width: 569px) {
+  .header__div {
+    width: 300px;
+  }
+  .soundboard {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1%;
+  }
+}
+@media only screen and (min-width: 570px) and (max-width: 720px) {
+  .header__div {
+    width: 600px;
+  }
+  .soundboard {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2%;
+  }
+}
+
+@media only screen and (min-width: 721px) and (max-width: 1023px) {
+  .header__div {
+    width: 700px;
+  }
+  .soundboard {
+    -ms-grid-columns: 1fr 2% 1fr 2% 1fr;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2%;
+  }
+}
+@media only screen and (min-width: 1024px) {
+  .header__div {
+    width: 700px;
+  }
+  .soundboard {
+    -ms-grid-columns: 1fr 2% 1fr 2% 1fr;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 2%;
+  }
+}
